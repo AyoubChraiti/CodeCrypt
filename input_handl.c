@@ -29,7 +29,7 @@ int	check_key(char *key)
 
 char *incrypt_line(t_list *x, char *line)
 {
-	for (int i = 0; line[i] != '\n'; i++)
+	for (int i = 0; i < strlen(line) - 1; i++)
 	{
 		line[i] = line[i] + 127;
 	}
@@ -38,7 +38,7 @@ char *incrypt_line(t_list *x, char *line)
 
 char *decrypt_line(t_list *x, char *line)
 {
-	for (int i = 0; line[i] != '\n'; i++)
+	for (int i = 0; i < strlen(line) - 1; i++)
 	{
 		line[i] = line[i] - 127;
 	}

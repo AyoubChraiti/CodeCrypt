@@ -2,7 +2,7 @@ SRC = main.c input_handl.c utils.c
 
 INCLUDE = libft.a
 
-NAME = ex
+NAME = enc
 
 CC = cc
 
@@ -11,3 +11,5 @@ all:
 
 fclean:
 	rm -rf $(NAME)
+
+.PHONY: fclean all
