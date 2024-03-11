@@ -27,6 +27,32 @@ void remove_newline(char *str)
 
 void    ft_exit()
 {
-	fprintf(stderr, "Problem Occured\nTry Again Later\n");
+	fprintf(stderr, "\nProblem Occured\nTry Again Later\n");
 	exit(EXIT_FAILURE);
+}
+
+int	f1_dec(t_list *x, char *file)
+{
+	write(1, "Enter The Name of The File: ", 29);
+	file = get_next_line(0);
+	if (check_file(file))
+	{
+		printf("\nPlease Make Sure That The File Exist\nAnd Have The Permissions Needed\n\n");
+		return 1;
+	}
+	x->file_str = file;
+	return 0;
+}
+
+int f2_dec(t_list *x, char *code)
+{
+	write(1, "Key Of 3 Numbers: ", 19);
+	code = get_next_line(0);
+	if (check_key(code))
+	{
+		printf("\nPlease enter the key Used For Encrypting.\n");
+		return 1;
+	}
+	x->key = code;
+	return 0;
 }

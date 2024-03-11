@@ -26,8 +26,10 @@ void			ft_exit();
 void			remove_newline(char *str);
 int				check_file(char *file);
 int				check_key(char *key);
-char			*incrypt_line(t_list *x, char *line);
+char			*incrypt_line(t_list *x, char *line, int code);
 void			getting_input(t_list *x, int flag);
 void			throw_valid_arg();
+int				f2_dec(t_list *x, char *code);
+int				f1_dec(t_list *x, char *file);
 
 #endif
