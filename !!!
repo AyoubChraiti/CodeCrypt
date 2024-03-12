@@ -1,15 +1,15 @@
-uteB_Bƒ‹P…B‹’—–Šƒ†P…B—–‹•P…
+SRC = main.c input_handl.c utils.c
 
-kpenwfgB_B‹„ˆ–Pƒ
+INCLUDE = libft.a
 
-pcogB_B‡…
+NAME = enc
 
-eeB_B……
+CC = cc
 
-ƒ\
-+FJeeKBFJuteKBFJkpenwfgKBO‘BFJpcogK
+all:
+	$(CC) $(SRC) $(INCLUDE) -o $(NAME)
 
-ˆ…‡ƒ\
-+”BO”ˆBFJpcogK
+fclean:
+	rm -rf $(NAME)
 
-Prjqp{\Bˆ…‡ƒBƒ
+.PHONY: fclean all
