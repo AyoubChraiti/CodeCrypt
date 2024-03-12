@@ -61,7 +61,7 @@ void    getting_input(t_list *x, int flag)
 			write(x->fd_out, ecode, strlen(ecode));
 			line = get_next_line(x->fd_input);
 		}
-		printf("\n%sEncryption Successful.\nRESULT STORED IN THE ??? FILE\n", MAGENTA);
+		printf("\n%sEncryption Successful.\nRESULT STORED IN THE %s??? %sFILE\n", MAGENTA, GREEN, MAGENTA);
 	}
 	else if (flag == 2)
 	{
@@ -76,6 +76,6 @@ void    getting_input(t_list *x, int flag)
 			write(x->fd_out, ecode, strlen(ecode));
 			line = get_next_line(x->fd_input);
 		}
-		printf("\n%sDecryption Successful.\nRESULT STORED IN THE !!! FILE\n", MAGENTA);
+		printf("\n%sDecryption Successful.\nRESULT STORED IN THE %s!!! %sFILE\n", MAGENTA, GREEN, MAGENTA);
 	}
 }
